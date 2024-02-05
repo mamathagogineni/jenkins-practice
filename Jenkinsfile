@@ -4,6 +4,10 @@ pipeline {
             label 'AGENT1'
         }
     }
+
+    options {
+        timeout(time: 1, unit: 'SECONDS')
+    }
     
     stages {
      stage ('build') {
@@ -29,6 +33,9 @@ pipeline {
     }
     always {
         echo "Always say hiiiii"
+    }
+    failure {
+        echo "Build got failed"
     }
    }
 }
