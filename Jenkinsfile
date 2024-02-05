@@ -27,5 +27,8 @@ pipeline {
     success {
         echo "build is success"
     }
+    always {
+        echo "Always say hiiiii"
+    }
    }
 }
