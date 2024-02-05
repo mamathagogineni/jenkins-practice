@@ -38,5 +38,8 @@ pipeline {
     failure {
         echo "Build got failed"
     }
+    aborted {
+        echo "aborted due to timeout exception"
+    }
    }
 }
